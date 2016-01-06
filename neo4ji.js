@@ -132,7 +132,7 @@ function createInstance(name, version){
     }
 
     exec('rm -rf ' + instancesDir + name);
-    exec('tar -xjf ' + templatePath(version) + ' -C ' + instancesDir);
+    exec('tar -xvf ' + templatePath(version) + ' -C ' + instancesDir);
 
 
     if(!fs.existsSync(instancesDir + 'neo4j-community-' + version)){
